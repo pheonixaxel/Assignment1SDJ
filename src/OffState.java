@@ -1,19 +1,23 @@
 public class OffState implements HeaterSTATE
 {
   private static int power = 0;
-
-  @Override public void turnUp(Heater heater)
-  {
-    power++;
+  private Heater state;
+  public OffState(){
+    state=new Heater();
   }
 
-  @Override public void turnDown(Heater heater)
+  @Override public void turnUp()
   {
+   state.setCurrentState(new Power1State());
+  }
 
+  @Override public void turnDown()
+  {
   }
 
   @Override public int getPower()
   {
-    return 0;
+    return power;
   }
 }
+

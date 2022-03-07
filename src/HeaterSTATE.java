@@ -1,9 +1,10 @@
 public interface HeaterSTATE
 {
-  void turnUp(Heater heater);
+  void turnUp();
 
-  void turnDown(Heater heater);
+  void turnDown();
 
   int getPower();
 
 }
+
