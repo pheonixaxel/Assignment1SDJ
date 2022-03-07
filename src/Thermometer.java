@@ -19,6 +19,8 @@ public class Thermometer implements PropertyChangeListener
     subject.addPropertyChangeListener(this);
   }
 
+  public int getPower(){return power;}///!!!!!!!!!!!!!!!!!!!!!
+
   public double getTemp()
   {
     return temp;

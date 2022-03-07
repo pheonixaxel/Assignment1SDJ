@@ -6,7 +6,7 @@ public class Heater implements PropertyChangeSubject
   private HeaterSTATE currentState = new OffState();
   private PropertyChangeSupport powerChangeSupport = new PropertyChangeSupport(this);
 
-/*
+
   public void turnUp(){
 
   }
@@ -15,7 +15,7 @@ public class Heater implements PropertyChangeSubject
   }
   public int getPower(){
     return 0;
-  }*/
+  }
 
   public void setCurrentState(HeaterSTATE currentState)
   {
