@@ -4,24 +4,23 @@ public class Power3State implements HeaterSTATE
   private static final int power=3;
   private Heater state;
 
-  public Power3State()
+  public Power3State(Heater heater)
   {
-    state=new Heater();
     try{
-    Thread.sleep(40000);
-    state.setCurrentState(new Power2State());}
+    Thread.sleep(4000);
+   heater.setCurrentState(new Power2State());}
     catch (InterruptedException e){
       e.printStackTrace();
     }
   }
-  @Override public void turnUp()
+  @Override public void turnUp(Heater heater)
   {
   }
 
-  @Override public void turnDown()
+  @Override public void turnDown(Heater heater)
   {
     Thread.interrupted();
-    state.setCurrentState(new Power2State());
+    heater.setCurrentState(new Power2State());
   }
 
   @Override public int getPower()

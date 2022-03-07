@@ -2,7 +2,7 @@ public class ThermometerThreadOne implements Runnable
 {
     private Thermometer thermometer;
 
-  public void setThermometer(Thermometer thermometer)
+  public ThermometerThreadOne(Thermometer thermometer)
   {
     this.thermometer = thermometer;
   }
@@ -13,8 +13,8 @@ public class ThermometerThreadOne implements Runnable
       {
         try
         {
-          Thread.sleep(4000);
-          thermometer.calcTemp(4);
+          Thread.sleep(1000);
+          System.out.println("T1: "+thermometer.calcTemp(1)+"\n");
         } catch (InterruptedException e) {}
       }
   }

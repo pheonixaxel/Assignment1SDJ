@@ -1,19 +1,14 @@
 public class Power2State implements HeaterSTATE
 {
   private static final int power=2;
-  private Heater state;
-
-  public Power2State(){
-    state=new Heater();
-  }
-  @Override public void turnUp()
+  @Override public void turnUp(Heater heater)
   {
-    state.setCurrentState(new Power3State());
+    heater.setCurrentState(new Power3State(heater));
   }
 
-  @Override public void turnDown()
+  @Override public void turnDown(Heater heater)
   {
-    state.setCurrentState(new Power1State());
+    heater.setCurrentState(new Power1State());
   }
 
   @Override public int getPower()
