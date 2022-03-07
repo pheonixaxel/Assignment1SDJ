@@ -24,9 +24,13 @@ public class Thermometer implements PropertyChangeListener
     return temp;
   }
 
-  public double calcTemp(double t, int p, int d, double t0, int s)
+  public double calcTemp(int s)
 
   {
+    double t = temp;
+    int p = power;
+    int d = distance;
+    double t0 = outdoorTemp;
 
     double tMax = Math.min(11 * p + 10, 11 * p + 10 + t0);
 
@@ -56,12 +60,4 @@ public class Thermometer implements PropertyChangeListener
     power = (int) evt.getNewValue();
   }
 
-  public void start() throws InterruptedException
-  {
-    for (int i = 0; i < 10; i++)
-    {
-      Thread.sleep(6000);
-      calcTemp(temp, power, distance, outdoorTemp, 6);
-    }
-  }
 }
