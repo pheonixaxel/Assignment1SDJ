@@ -1,10 +1,14 @@
 public class Thermometer
 {
   private double temp;
+  private final int distance;
+  private final double outdoorTemp;
 
-  public Thermometer(double temp)
+  public Thermometer(double temp, int distance, double outdoorTemp)
   {
     this.temp = temp;
+    this.distance = distance;
+    this.outdoorTemp = outdoorTemp;
   }
 
   public double getTemp()
@@ -37,5 +41,14 @@ public class Thermometer
     t = Math.min(Math.max(t - outdoorTerm + heaterTerm, t0), tMax);
 
     return t;
+  }
+
+  public void start() throws InterruptedException
+  {
+    while (true)
+    {
+      Thread.sleep(3000);
+
+    }
   }
 }
