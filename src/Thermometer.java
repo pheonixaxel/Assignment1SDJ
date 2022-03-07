@@ -1,5 +1,19 @@
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
 public class Thermometer
 {
+  @FXML
+  public Label t1; //will have to bind to t1
+  @FXML
+  public Label t2; //will have to bind to t2
+  @FXML
+  public Label t0; //will have to bind with t0 (outside temp)
+  @FXML
+  public Label t; //will have to bind with t (last measured temperature)
+  @FXML
+  public Label pos; //will have to bind with p
+
   private double temp;
 
   public Thermometer(double temp)
