@@ -1,14 +1,22 @@
-public class Thermometer
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
+public class Thermometer implements PropertyChangeListener
 {
   private double temp;
   private final int distance;
   private final double outdoorTemp;
+  private int power;
 
-  public Thermometer(double temp, int distance, double outdoorTemp)
+  private PropertyChangeSupport powerChangeSupport = new PropertyChangeSupport(this);
+
+  public Thermometer(double temp, int distance, double outdoorTemp, PropertyChangeSubject subject)
   {
     this.temp = temp;
     this.distance = distance;
     this.outdoorTemp = outdoorTemp;
+    subject.addPropertyChangeListener(this);
   }
 
   public double getTemp()
@@ -43,12 +51,17 @@ public class Thermometer
     return t;
   }
 
+  @Override public void propertyChange(PropertyChangeEvent evt)
+  {
+    power = (int) evt.getNewValue();
+  }
+
   public void start() throws InterruptedException
   {
-    while (true)
+    for (int i = 0; i < 10; i++)
     {
-      Thread.sleep(3000);
-
+      Thread.sleep(6000);
+      calcTemp(temp, power, distance, outdoorTemp, 6);
     }
   }
 }
