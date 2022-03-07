@@ -9,11 +9,11 @@ public class OffState implements HeaterSTATE
 
   @Override public void turnDown(Heater heater)
   {
-
+   // nothing
   }
 
   @Override public int getPower()
   {
-    return 0;
+    return power;
   }
 }

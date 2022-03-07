@@ -7,6 +7,11 @@ public class Thermometer
     this.temp = temp;
   }
 
+  public double getTemp()
+  {
+    return temp;
+  }
+
   public double calcTemp(double t, int p, int d, double t0, int s)
 
   {
