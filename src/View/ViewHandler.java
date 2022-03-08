@@ -29,7 +29,8 @@ public class ViewHandler
     loader.setLocation(getClass().getResource("View/heatingSysControl.fxml"));
     root =loader.load();
     HeatingSysControlController view = loader.getController();
-    view.init();
+    view.init(factory.getViewModel().getPower(), factory.getViewModel().getTemperature()[0],
+              factory.getViewModel().getTemperature()[1], factory.getViewModel().getOutdoorTemp());
     scene = new Scene(root);
     stage.setTitle("Temperature");
     stage.setScene(scene);

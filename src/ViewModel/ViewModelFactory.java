@@ -2,7 +2,7 @@ package ViewModel;
 
 import Model.ModelFactory;
 
-public class ViewModelFactory
+public class  ViewModelFactory
 {
   private ViewModel viewModel;
 

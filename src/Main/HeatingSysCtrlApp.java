@@ -8,16 +8,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+import View.*;
+
 public class HeatingSysCtrlApp extends Application {
 
     Scene scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(
-        "View/heatingSysControl.fxml")));
+        "View/HeatingSysControl.fxml")));
 
     public HeatingSysCtrlApp() throws IOException {
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-
     }
 }
