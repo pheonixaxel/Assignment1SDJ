@@ -19,7 +19,7 @@ public class HeatingSysControlController
   @FXML
   public Label t;
   @FXML
-  public Label t0;
+  public Label t0;///
   @FXML
   public Button editButton;
 
