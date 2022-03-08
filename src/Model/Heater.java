@@ -13,19 +13,6 @@ public class Heater implements PropertyChangeSubject
 
   ObservableList<Integer> hPowList = FXCollections.observableArrayList(0, 1, 2, 3);
 
-  @FXML
-  public Label t;
-  @FXML
-  public Label t0;
-  @FXML
-  public ChoiceBox hPow;
-
-  @FXML
-  private void initialize(){
-    hPow.setValue(power);
-    hPow.setItems(hPowList);
-  }
-
   private HeaterSTATE currentState = new OffState();
   private PropertyChangeSupport powerChangeSupport = new PropertyChangeSupport(this);
 

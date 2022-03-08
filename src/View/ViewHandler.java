@@ -22,7 +22,6 @@ public class ViewHandler
     loader.setLocation(getClass().getResource("View/heatingSysControl.fxml"));
     root =loader.load();
     HeatingSysControlController view = loader.getController();
-    //view.init() NOT YET WRITTEN
     scene = new Scene(root);
     stage.setTitle("Temperature");
     stage.setScene(scene);
@@ -36,8 +35,8 @@ public class ViewHandler
 
   loader.setLocation(getClass().getResource("View/heaterPowPosManage.fxml"));
   root =loader.load();
-  HeatingSysControlController view = loader.getController();
-  /// view.init() Connect to temperature with factory
+  HeaterPowPosManageController view = loader.getController();
+  ///view.init() USING THE VIEW
   scene = new Scene(root);
   stage.setTitle("Temperature");
   stage.setScene(scene);

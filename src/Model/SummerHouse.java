@@ -2,32 +2,33 @@ package Model;
 
 public class SummerHouse implements Model
 {
-  private Thermometer inDoorTherm1;
-  private Thermometer inDoorTherm2;
+  private Thermometer t1;
+  private Thermometer t2;
   private Heater heater;
+  private final double outdoorTemp =-5.;
 
   public SummerHouse(Thermometer inDoorTherm1, Thermometer inDoorTherm2, Heater heater)
   {
-    this.inDoorTherm1 = inDoorTherm1;
-    this.inDoorTherm2 = inDoorTherm2;
+    this.t1 = inDoorTherm1;
+    this.t2 = inDoorTherm2;
     this.heater = heater;
     heater.setCurrentState(new OffState());
   }
 
-  public double getInDoorTherm1()
+  @Override public Thermometer getT1()
   {
-    return inDoorTherm1.getTemp();
+    return t1;
   }
 
-  public double getInDoorTherm2()
+  @Override public Thermometer getT2()
   {
-    return inDoorTherm2.getTemp();
+    return t2;
   }
 
-  public Heater getHeater()
+  @Override public Heater getHeater()
   {
     return heater;
   }
 
-
+  @Override public double getOutdoorTemp(){return outdoorTemp;}
 }
