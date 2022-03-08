@@ -19,7 +19,7 @@ public class HeaterPowPosManageController
     viewHandler.openView1();
   }
 
-  public void init(double temp, double temp0)
+  public void init(String temp, String temp0)
   {
     hPow.getItems().add(0);
     hPow.getItems().add(1);

@@ -21,14 +21,19 @@ public class ViewModel
     return rtrn;
   }
 
-  public double getOutdoorTemp()
+  public String getOutdoorTemp()
   {
-    return model.getOutdoorTemp();
+    return round(model.getOutdoorTemp());
   }
 
   public String averageTemp()
   {
     return round((model.getT1().getTemp()+model.getT2().getTemp())/2);
+  }
+
+  public int getPower()
+  {
+    return model.getHeater().getPower();
   }
 
   private String round(double number)

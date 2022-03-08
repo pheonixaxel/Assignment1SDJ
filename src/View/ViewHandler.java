@@ -1,6 +1,7 @@
 package View;
 
 import View.HeatingSysControlController;
+import ViewModel.ViewModel;
 import ViewModel.ViewModelFactory;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,6 +15,12 @@ public class ViewHandler
   private Stage stage;
   private ViewModelFactory factory;
 
+  public ViewHandler(Stage stage, ViewModelFactory factory)
+  {
+    this.stage=stage;
+    this.factory=factory;
+  }
+
   public void openView1() throws IOException{ // OPENS heatingSysControl WINDOW
     Scene scene = null;
     FXMLLoader loader = new FXMLLoader();
@@ -22,6 +29,7 @@ public class ViewHandler
     loader.setLocation(getClass().getResource("View/heatingSysControl.fxml"));
     root =loader.load();
     HeatingSysControlController view = loader.getController();
+    view.init();
     scene = new Scene(root);
     stage.setTitle("Temperature");
     stage.setScene(scene);
@@ -36,7 +44,7 @@ public class ViewHandler
   loader.setLocation(getClass().getResource("View/heaterPowPosManage.fxml"));
   root =loader.load();
   HeaterPowPosManageController view = loader.getController();
-  ///view.init() USING THE VIEW
+  view.init(factory.getViewModel().averageTemp(),factory.getViewModel().getOutdoorTemp());
   scene = new Scene(root);
   stage.setTitle("Temperature");
   stage.setScene(scene);
