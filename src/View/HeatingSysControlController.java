@@ -22,6 +22,7 @@ public class HeatingSysControlController
   public Button editButton;
 
   ViewHandler viewHandler;
+  ViewModel viewModel;
 
   public void onEditButton(ActionEvent e) throws IOException
   {
@@ -31,8 +32,8 @@ public class HeatingSysControlController
   public void init(double pos, String t1, String t2, String t0)
   {
     this.pos.setText(pos+"");
-    this.t1.setText(t1);
-    this.t2.setText(t2);
+    this.t1.textProperty().bind(viewModel.T1Property());
+    this.t2.textProperty().bind(viewModel.T2Property());
     this.t0.setText(t0);
   }
 }

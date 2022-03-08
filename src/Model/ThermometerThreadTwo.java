@@ -1,8 +1,11 @@
 package Model;
 
+import java.beans.PropertyChangeSupport;
+
 public class ThermometerThreadTwo implements Runnable
 {
   private Thermometer thermometer;
+  private PropertyChangeSupport propertyChangeSupport;
 
   public ThermometerThreadTwo(Thermometer thermometer)
   {
@@ -11,13 +14,12 @@ public class ThermometerThreadTwo implements Runnable
 
   @Override public void run()
   {
-    for (int i = 0; i < 10; i++)
+    while(true)
     {
       try
       {
-        Thread.sleep(2000);
-
-        System.out.println("T2: "+thermometer.calcTemp(2)+"\n");
+        Thread.sleep(4000);
+        propertyChangeSupport.firePropertyChange("Measured2",thermometer.getTemp(),thermometer.calcTemp(4));
       }
       catch (InterruptedException e)
       {
