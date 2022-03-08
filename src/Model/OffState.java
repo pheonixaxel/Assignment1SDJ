@@ -1,3 +1,5 @@
+package Model;
+
 public class OffState implements HeaterSTATE
 {
   private static int power = 0;

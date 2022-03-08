@@ -1,3 +1,5 @@
+package Model;
+
 public class ThermometerThreadOne implements Runnable
 {
     private Thermometer thermometer;

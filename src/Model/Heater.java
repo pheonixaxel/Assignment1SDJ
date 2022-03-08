@@ -1,3 +1,5 @@
+package Model;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -64,5 +66,11 @@ public class Heater implements PropertyChangeSubject
       PropertyChangeListener listener)
   {
     powerChangeSupport.removePropertyChangeListener(name,listener);
+  }
+
+  @Override public void removePropertyChangeListener(
+      PropertyChangeListener listener)
+  {
+    powerChangeSupport.removePropertyChangeListener(listener);
   }
 }

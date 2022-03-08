@@ -1,4 +1,6 @@
-public class SummerHouse
+package Model;
+
+public class SummerHouse implements Model
 {
   private Thermometer inDoorTherm1;
   private Thermometer inDoorTherm2;

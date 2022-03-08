@@ -1,3 +1,7 @@
+package View;
+
+import View.HeatingSysControlController;
+import ViewModel.ViewModelFactory;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,7 +19,7 @@ public class ViewHandler
     FXMLLoader loader = new FXMLLoader();
     Parent root = null;
 
-    loader.setLocation(getClass().getResource("heatingSysControl.fxml"));
+    loader.setLocation(getClass().getResource("View/heatingSysControl.fxml"));
     root =loader.load();
     HeatingSysControlController view = loader.getController();
     //view.init() NOT YET WRITTEN
@@ -30,7 +34,7 @@ public class ViewHandler
   FXMLLoader loader = new FXMLLoader();
   Parent root = null;
 
-  loader.setLocation(getClass().getResource("heaterPowPosManage.fxml"));
+  loader.setLocation(getClass().getResource("View/heaterPowPosManage.fxml"));
   root =loader.load();
   HeatingSysControlController view = loader.getController();
   /// view.init() Connect to temperature with factory

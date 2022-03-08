@@ -1,3 +1,5 @@
+package Model;
+
 public class Power1State implements HeaterSTATE
 {
   private static final int power=1;

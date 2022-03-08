@@ -1,3 +1,5 @@
+package Model;
+
 public class Power3State implements HeaterSTATE
 {
 
