@@ -1,3 +1,5 @@
+package Model;
+
 public interface HeaterSTATE
 {
   void turnUp(Heater heater);

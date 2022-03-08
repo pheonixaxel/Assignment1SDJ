@@ -1,3 +1,5 @@
+package Model;
+
 public class SummerHouse
 {
   private Thermometer inDoorTherm1;

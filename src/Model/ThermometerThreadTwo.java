@@ -1,3 +1,5 @@
+package Model;
+
 public class ThermometerThreadTwo implements Runnable
 {
   private Thermometer thermometer;

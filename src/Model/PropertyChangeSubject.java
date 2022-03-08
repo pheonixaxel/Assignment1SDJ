@@ -1,3 +1,5 @@
+package Model;
+
 import java.beans.PropertyChangeListener;
 
 public interface PropertyChangeSubject
