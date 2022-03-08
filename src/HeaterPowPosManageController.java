@@ -1,5 +1,3 @@
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -12,11 +10,11 @@ public class HeaterPowPosManageController
   @FXML public Label t;
   @FXML public Label t0;
   @FXML public ChoiceBox hPow;
-  HeaterPowPosManageVM viewModel;
+  ViewHandler viewModel;
 
   public void onSaveButton(ActionEvent e) throws IOException
   {
-    viewModel.changeView();
+    viewModel.openView1();
   }
 
   public void init(double temp, double temp0)
