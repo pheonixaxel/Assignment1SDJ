@@ -12,7 +12,7 @@
    <children>
       <Pane layoutX="14.0" layoutY="14.0" prefHeight="372.0" prefWidth="572.0">
          <children>
-            <Label layoutX="186.0" layoutY="14.0" prefHeight="17.0" prefWidth="201.0" text="Outdoor temprature:" fx:id="t0" />
+            <Label layoutX="186.0" layoutY="14.0" prefHeight="17.0" prefWidth="201.0" text="Outdoor temperature:" fx:id="t0" />
             <Label layoutX="159.0" layoutY="77.0" prefHeight="78.0" prefWidth="238.0" fx:id="t">
                <font>
                   <Font size="41.0" />
