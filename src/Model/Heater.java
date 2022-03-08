@@ -23,12 +23,14 @@ public class Heater implements PropertyChangeSubject
   public void turnDown(){
 
   }
-  public int getPower(){
-    return 0;
-  }
+
   public Heater(int power)
   {
     this.power = power;
+  }
+
+  public int getPower(){
+    return power;
   }
 
   public void setCurrentState(HeaterSTATE currentState)
