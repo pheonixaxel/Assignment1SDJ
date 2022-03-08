@@ -10,11 +10,11 @@ public class HeaterPowPosManageController
   @FXML public Label t;
   @FXML public Label t0;
   @FXML public ChoiceBox hPow;
-  ViewHandler viewModel;
+  ViewHandler viewHandler;
 
   public void onSaveButton(ActionEvent e) throws IOException
   {
-    viewModel.openView1();
+    viewHandler.openView1();
   }
 
   public void init(double temp, double temp0)
