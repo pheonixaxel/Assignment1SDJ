@@ -67,4 +67,10 @@ public class Heater implements PropertyChangeSubject
   {
     powerChangeSupport.removePropertyChangeListener(name,listener);
   }
+
+  @Override public void removePropertyChangeListener(
+      PropertyChangeListener listener)
+  {
+    powerChangeSupport.removePropertyChangeListener(listener);
+  }
 }
